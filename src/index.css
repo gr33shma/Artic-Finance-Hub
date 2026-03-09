@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-arctic-50: #f0f9ff;
+  --color-arctic-100: #e0f2fe;
+  --color-arctic-200: #bae6fd;
+  --color-arctic-300: #7dd3fc;
+  --color-arctic-400: #38bdf8;
+  --color-arctic-500: #0ea5e9;
+  --color-arctic-600: #0284c7;
+  --color-arctic-700: #0369a1;
+  --color-arctic-800: #075985;
+  --color-arctic-900: #0c4a6e;
+  --color-arctic-950: #082f49;
+}
+
+body {
+  @apply bg-arctic-50 text-arctic-950 antialiased;
+}
+
+.arctic-glass {
+  @apply bg-white/80 backdrop-blur-md border border-arctic-100 shadow-sm;
+}
+
+.arctic-card {
+  @apply bg-white rounded-2xl border border-arctic-100 shadow-sm hover:shadow-md transition-shadow duration-300;
+}
+
