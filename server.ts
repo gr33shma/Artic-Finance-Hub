@@ -4,6 +4,7 @@ import express from "express";
 import cors from "cors";
 import OpenAI from "openai";
 import { google } from "googleapis";
+import mongoose from "mongoose";
 import { createServer as createViteServer } from "vite";
 
 const app = express();
