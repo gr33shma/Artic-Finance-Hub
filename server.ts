@@ -5,7 +5,10 @@ import OpenAI from "openai";
 import { google } from "googleapis";
 import { createServer as createViteServer } from "vite";
 
-const app = express();  // <-- app must be declared first
+// ------------------------
+// Initialize app and port
+// ------------------------
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(
