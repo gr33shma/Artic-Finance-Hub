@@ -2,6 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 // Then use API_URL in fetches:
 const res = await fetch(`${API_URL}/ai/chat`, {
