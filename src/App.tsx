@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
-
 // Then use API_URL in fetches:
 const res = await fetch(`${API_URL}/ai/chat`, {
   method: "POST",
