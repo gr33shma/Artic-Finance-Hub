@@ -2,14 +2,19 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
-// Then use API_URL in fetches:
-const res = await fetch(`${API_URL}/ai/chat`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, prompt })
-});
+
+async function askAI(name: string, prompt: string) {
+  const res = await fetch(`${API_URL}/ai/chat`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, prompt })
+  });
+
+  if (!res.ok) throw new Error("Failed to reach AI API");
+
+  return await res.json();
+}
 
 import { useState, useEffect, useRef, type ReactNode } from 'react';
 import {
