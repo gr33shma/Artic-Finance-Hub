@@ -10,8 +10,6 @@ import {
 } from 'recharts';
 import { GoogleGenAI } from "@google/genai";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 // --- AI Advisor Logic ---
 async function getFinleyAdvice(prompt: string, profile: any) {
   if (!process.env.GEMINI_API_KEY) {
