@@ -1,13 +1,13 @@
-require("dotenv").config();
+import "dotenv/config";
 
-const express = require("express");
-const cors = require("cors");
-const OpenAI = require("openai");
-const { google } = require("googleapis");
-const mongoose = require("mongoose");
+import express from "express";
+import cors from "cors";
+import OpenAI from "openai";
+import { google } from "googleapis";
+import { createServer as createViteServer } from "vite";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.use(
   cors({
